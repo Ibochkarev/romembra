@@ -204,19 +204,19 @@
             </section>
             <section class="circle">
                 <div class="circle__wraper">
-                    <h2 class="calc__head">ТЕХНИЧЕСКАЯ ИНФОРМАЦИЯ</h2>
+                    <h2 class="calc__head">{$_modx->resource.tech_title}</h2>
                     <div class="circle__main">
                         <div class="circle__item _left-top">
-                            <p><span>Скачать </span> листы продукта на <br> мембраны <b> CSM</b></p>
-                            <a class="dowland-doc" href="#"></a>
+                            <p>{$_modx->resource.tech_download_title_1}</p>
+                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_1}" download></a>
                         </div>
                         <div class="circle__item _right-top">
-                            <p><span>Скачать </span> листы продукта на <br> мембраны <b> CSM</b></p>
-                            <a class="dowland-doc" href="#"></a>
+                            <p>{$_modx->resource.tech_download_title_2}</p>
+                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_2}" download></a>
                         </div>
                         <div class="circle__item _right-bottom">
-                            <p><span>Скачать </span> листы продукта на <br> мембраны <b> CSM</b></p>
-                            <a class="dowland-doc" href="#"></a>
+                            <p>{$_modx->resource.tech_download_title_3}</p>
+                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_3}" download></a>
                         </div>
                         <div class="circle__center">
                             <picture>
