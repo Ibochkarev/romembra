@@ -286,32 +286,20 @@
                 </div>
             </section>
             <section class="tabs-section _doc-main">
-                <h2 class="calc__head">СЕРТИФИКАТЫ КАЧЕСТВА</h2>
+                <h2 class="calc__head">{$_modx->resource.certificats_title}</h2>
                 <div class="doc_wrap ">
+
+                    {set $items = $_modx->resource.certificats_list | fromJSON}
+                    {foreach $items as $item}
+                    {set $image = 'assets/media/' ~ $item.image}
                     <div class="doc_block">
                         <picture>
-                            <source srcset="assets/template/img/doc/1.webp" type="image/webp">
-                            <img src="assets/template/img/doc/1.png" alt="">
+                            <source srcset="{$image}" type="image/webp">
+                            <img src="{$image}" alt="{$item.text}">
                         </picture>
                     </div>
-                    <div class="doc_block">
-                        <picture>
-                            <source srcset="assets/template/img/doc/2.webp" type="image/webp">
-                            <img src="assets/template/img/doc/2.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="doc_block">
-                        <picture>
-                            <source srcset="assets/template/img/doc/3.webp" type="image/webp">
-                            <img src="assets/template/img/doc/3.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="doc_block">
-                        <picture>
-                            <source srcset="assets/template/img/doc/4.webp" type="image/webp">
-                            <img src="assets/template/img/doc/4.png" alt="">
-                        </picture>
-                    </div>
+                    {/foreach}
+
                 </div>
             </section>
             <section class="form-block" id="form" >
