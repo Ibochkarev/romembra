@@ -14,24 +14,29 @@
                     </a>
                 </div>
                 <div class="icon-menu"><span></span><span></span><span></span></div>
-                <a href="tel:+380674837563" class="header__tell">+38 067 483 75 63</a>
+                <a href="tel:{$_modx->resource.phone  | preg_replace : '/[^0-9+]/' : ''}" class="header__tell">{$_modx->resource.phone}</a>
             </div>
         </header>
         <div class="menu__body">
             <ul class="menu__list">
-                <li><a class="scroll-to _goto-block" href="#calc">Подбор мембран ОО</a></li>
-                <li><a class="scroll-to _goto" href="#more">Преимущества TORAY</a></li>
-                <li><a class="scroll-to _goto" href="#_doc-main">Сертификаты</a></li>
-                <li><a class="scroll-to _goto-block" href="#form-block">Получить прайс-лист</a></li>
-                <li><a class="scroll-to _goto-block" href="#circle">Тех. информация</a></li>
-                <li><a class="scroll-to _goto-block" href="#footer">Контакты</a></li>
+                <li><a class="scroll-to _goto-block" href="#calc">{'menu_calc' | lexicon}</a></li>
+                <li><a class="scroll-to _goto" href="#more">{'menu_advantages' | lexicon}</a></li>
+                <li><a class="scroll-to _goto" href="#_doc-main">{'menu_certificates' | lexicon}</a></li>
+                <li><a class="scroll-to _goto-block" href="#form-block">{'menu_get_price' | lexicon}</a></li>
+                <li><a class="scroll-to _goto-block" href="#circle">{'menu_tech_info' | lexicon}</a></li>
+                <li><a class="scroll-to _goto-block" href="#footer">{'menu_contacts' | lexicon}</a></li>
             </ul>
             <div class="menu__footer">
                 <ul class="lang">
-                    <li><a href="#" class="_active">РУС</a></li>
-                    <li><a href="#">УКР</a></li>
+                    {$_modx->runSnippet('!getLocales', [
+                        'sortby' => 'id',
+                        'sortdir' => 'DESC',
+                        'defaultLocale' => 'ua',
+                        'tpl' => '@INLINE <li><a href="{$url}">{$name}</a></li>',
+                        'currentTpl' => '@INLINE <li><a class="_active">{$name}</a></li>'
+                    ])}
                 </ul>
-                <a href="tel:+380674837563" class="menu__tell">+38 067 483 75 63</a>
+                <a href="tel:{$_modx->resource.phone  | preg_replace : '/[^0-9+]/' : ''}" class="menu__tell">{$_modx->resource.phone}</a>
             </div>
         </div>
         <main class="page">
@@ -56,7 +61,7 @@
                             </picture>
                         </div>
                     </div>
-                    <button class="main__btn"> Получить прайс-лист</button>
+                    <button class="main__btn"> {'btn_get_price' | lexicon}</button>
                 </div>
             </div>
         <section class="calc" >
@@ -73,7 +78,7 @@
                         <button class="calc__btn">4”</button>
                         <button class="calc__btn">8”</button>
                         <div class="select--wraper">
-                            <h3 class="select--head">Производитель</h3>
+                            <h3 class="select--head">{'title_vendor' | lexicon}</h3>
                             <select name="form[1]" class="form">
                                 <option value="zero"></option>
                                 <option value="torey">torey</option>
@@ -84,7 +89,7 @@
                             </select>
                         </div>
                         <div class="select--wraper ">
-                            <h3 class="select--head">Модель</h3>
+                            <h3 class="select--head">{'title_model' | lexicon}</h3>
                             <select name="form[2]" class="form">
                                 <option value="zero"></option>
                                 <option value="1">Пункт №1</option>
@@ -106,7 +111,7 @@
                 </div>
                 <h3 class="calc__head--mobile">АНАЛОГИ ДЛЯ ВЫБРАННОЙ МЕМБРАНЫ. </h3>
                 <h3 class="calc__head--mobile">СРАВНИТЕЛЬНЫЕ ХАРАКТЕРИСТИКИ</h3>
-                <div class="_mobile--more">Показать</div>
+                <div class="_mobile--more">{'title_show' | lexicon}</div>
                 <div class="calc--wraper scroll-block">
                     <table class="_calc__table">
                         <tr class="first_tr">
@@ -285,10 +290,10 @@
                     <div class="more_btn">
                         <a href="#">
                             <span class="_active">
-                                БОЛЬШЕ...
+                                {'title_more' | lexicon}
                             </span>
                             <span>
-                                НАЗАД...
+                                {'title_back' | lexicon}
                             </span>
                         </a>
                     </div>
@@ -444,18 +449,18 @@
                     <div class="footer__item _face"></div>
                     <div class="footer__item _insta"></div>
                 </div>
-                <p class="politica__footer">Политика конфиденциальности</p>
+                <p class="politica__footer">{'title_policy' | lexicon}</p>
             </div>
             <div class="footer__second">
                 <div class="footer__arrow"></div>
-                <p class="politica__footer">© 2021 Все права защищены</p>
+                <p class="politica__footer">© {'' | date : 'Y'} {'title_rights' | lexicon}</p>
             </div>
             <div class="footer__third">
                 <h4 class="footer__third--head">Наши контакты:</h4>
-                <a href="tel:+380674837563" class="footer__third--item">+38 067 483 75 63</a>
-                <p class="footer__third--item">Украина г.Киев</p>
-                <p class="footer__third--item">ул. Зоологическая 5а</p>
-                <p class="footer__third--item">Режим работы: пн-вс с 9.00-18.00</p>
+                <a href="tel:{$_modx->resource.phone  | preg_replace : '/[^0-9+]/' : ''}" class="footer__third--item">{$_modx->resource.phone}</a>
+                <p class="footer__third--item">{$_modx->resource.city}</p>
+                <p class="footer__third--item">{$_modx->resource.street}</p>
+                <p class="footer__third--item">{$_modx->resource.work_clock}</p>
             </div>
         </div>
     </footer>
@@ -463,16 +468,16 @@
         <div class="cookie__left">
             <p>Этот сайт использует файлы cookie. Более подробные данные вы можете найти в политике по защите персональных данных</p>
             <br>
-            <p class="politica__footer">Политика конфиденциальности</p>
+            <p class="politica__footer">{'title_policy' | lexicon}</p>
         </div>
-        <button class="btn-cookie">ПРИНЯТЬ</button>
+        <button class="btn-cookie">{'btn_accept' | lexicon}</button>
     </div>
 </div>
 <div class="popup popup_popup">
     <div class="popup__content">
         <div class="popup__body">
             <div class="popup__close"></div>
-            <h1>Политика конфиденциальности</h1>
+            <h1>{'title_policy' | lexicon}</h1>
             <h3>Заглавие</h3>
             <p>Повседневная практика показывает, что базовый вектор развития позволяет оценить значение инновационных методов управления процессами! Каждый из нас понимает очевидную вещь: понимание сути ресурсосберегающих технологий способствует подготовке и реализации дальнейших направлений развития.
                 <br>1. В своём стремлении улучшить пользовательский опыт . мы упускаем, что элементы политического процесса. превращены в посмешище, хотя само их существование приносит несомненную пользу.обществу. Современные технологии достигли такого уровня, что укрепление и развитие внутренней структуры играет важную роль в формировании кластеризации усилий. Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и объявлены нарушающими общечеловеческие нормы этики и морали. Многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. Активно развивающиеся страны третьего мира будут функционально разнесены на независимые элементы. Прежде всего, высококачественный прототип будущего проекта играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
@@ -502,7 +507,7 @@
                     <label class="checkbox">
                         <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                        <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
+                        <p class="checkbox__text  checkbox__header">{'btn_get_price' | lexicon}</p>
                     </label>
                 </div>
             </form>
