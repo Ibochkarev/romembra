@@ -64,7 +64,7 @@
             </div>
             <section class="calc" >
                 <div class="calc__wrap">
-                    <h2 class="calc__head">КАЛЬКУЛЯТОР ПОДБОРА МЕМБРАН ОБРАТНОГО ОСМОСА</h2>
+                    <h2 class="calc__head">{$_modx->resource.calc_title}</h2>
                     <div class="calc__main">
                         <div class="rememba_img">
                             <picture>
@@ -169,120 +169,24 @@
             </section>
             <section class="more">
                 <div class="calc__wrap">
-                    <h2 class="calc__head">ПРЕИМУЩЕСТВА МЕМБРАН TORAY</h2>
+                    <h2 class="calc__head">{$_modx->resource.benefits_title}</h2>
                     <div class="more__wraper">
                         <div class="more__wraper">
                             <div class="more__wraper--top">
+
+                                {set $items = $_modx->resource.benefits_list | fromJSON}
+                                {foreach $items as $item}
+                                {set $image = 'assets/media/' ~ $item.image}
                                 <div class="more__item">
                                     <div class="more__img _ibg">
                                         <picture>
-                                            <source srcset="assets/template/img/more/1.svg" type="image/webp">
-                                            <img src="assets/template/img/more/1.svg" alt="#">
+                                            <img src="{$image}" alt="">
                                         </picture>
                                     </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
+                                    <p>{$item.text}</p>
                                 </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/2.svg" type="image/webp">
-                                            <img src="assets/template/img/more/2.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/3.svg" type="image/webp">
-                                            <img src="assets/template/img/more/3.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                            </div>
-                            <div class="more__wraper--bottom">
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/1.svg" type="image/webp">
-                                            <img src="assets/template/img/more/1.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/2.svg" type="image/webp">
-                                            <img src="assets/template/img/more/2.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/3.svg" type="image/webp">
-                                            <img src="assets/template/img/more/3.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/1.svg" type="image/webp">
-                                            <img src="assets/template/img/more/1.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/2.svg" type="image/webp">
-                                            <img src="assets/template/img/more/2.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/3.svg" type="image/webp">
-                                            <img src="assets/template/img/more/3.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/1.svg" type="image/webp">
-                                            <img src="assets/template/img/more/1.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/2.svg" type="image/webp">
-                                            <img src="assets/template/img/more/2.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
-                                <div class="more__item">
-                                    <div class="more__img _ibg">
-                                        <picture>
-                                            <source srcset="assets/template/img/more/3.svg" type="image/webp">
-                                            <img src="assets/template/img/more/3.svg" alt="#">
-                                        </picture>
-                                    </div>
-                                    <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
-                                </div>
+                                {/foreach}
+
                             </div>
                         </div>
                         <div class="more_btn">
