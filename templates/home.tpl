@@ -229,59 +229,30 @@
                 <div class="item_decoretion"></div>
             </section>
             <section class="tabs-section">
-                <h2 class="calc__head">Наиболее популярные типы мембран</h2>
+                <h2 class="calc__head">{$_modx->resource.popular_title}</h2>
                 <div class="tabs__wraper _tabs">
                     <div class="tabs__points">
-                        <div class="tab--point _tabs-item _active">Мембранные элементы Toray </div>
-                        <div class="tab--point _tabs-item">Мембранные элементы Toray </div>
-                        <div class="tab--point _tabs-item">Мембранные элементы Toray </div>
-                        <div class="tab--point _tabs-item">Мембранные элементы Toray </div>
-                        <div class="tab--point _tabs-item">Мембранные элементы Toray </div>
-                        <div class="tab--point _tabs-item">Мембранные элементы Toray </div>
+
+                        {set $items = $_modx->resource.popular_list | fromJSON}
+                        {foreach $items as $idx => $item}
+                        <div class="tab--point _tabs-item{if $idx == 0} _active{/if}">{$item.title}</div>
+                        {/foreach}
+
                     </div>
                     <div class="tabs__values">
-                        <div class="tab__value _tabs-block  _active">
-                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+
+                        {set $items = $_modx->resource.popular_list | fromJSON}
+                        {foreach $items as $idx => $item}
+                        {set $image = 'assets/media/' ~ $item.image}
+                        <div class="tab__value _tabs-block{if $idx == 0} _active{/if}">
+                            <p>{$item.text}</p>
                             <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
+                                <source srcset="{$image}" type="image/webp">
+                                <img src="{$image}" alt="">
                             </picture>
                         </div>
-                        <div class="tab__value _tabs-block">
-                            <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                            <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="tab__value _tabs-block">
-                            <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                            <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="tab__value _tabs-block">
-                            <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                            <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="tab__value _tabs-block">
-                            <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                            <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
-                            </picture>
-                        </div>
-                        <div class="tab__value _tabs-block">
-                            <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                            <picture>
-                                <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
-                                <img src="assets/template/img/tabs/1.png" alt="">
-                            </picture>
-                        </div>
+                        {/foreach}
+
                     </div>
                 </div>
             </section>
