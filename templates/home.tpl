@@ -7,7 +7,10 @@
             <div class="header__content">
                 <div class="header__logo">
                     <a href="#">
-                        <picture><source srcset="img/icons/logo.svg" type="image/webp"><img src="img/icons/logo.svg" alt=""></picture>
+                        <picture>
+                            <source srcset="assets/template/img/icons/logo.svg" type="image/webp">
+                            <img src="assets/template/img/icons/logo.svg" alt="">
+                        </picture>
                     </a>
                 </div>
                 <div class="icon-menu"><span></span><span></span><span></span></div>
@@ -34,14 +37,23 @@
         <main class="page">
             <div class="page_head">
                 <div class="head--wrap">
-                    <picture><source srcset="img/main/main.webp" type="image/webp"><img class="main__ibg" src="img/main/main.png" alt=""></picture>
+                    <picture>
+                        <source srcset="assets/template/img/main/main.webp" type="image/webp">
+                        <img class="main__ibg" src="assets/template/img/main/main.png" alt="">
+                    </picture>
                     <h1 class="head--wrap__header">Официальный импортер <br> промышленных мембран </h1>
                     <div class="head--wrap__partner">
                         <div class="wrap--partner__item">
-                            <picture><source srcset="img/partner/toray.svg" type="image/webp"><img src="img/partner/toray.svg" alt="#"></picture>
+                            <picture>
+                                <source srcset="assets/template/img/partner/toray.svg" type="image/webp">
+                                <img src="assets/template/img/partner/toray.svg" alt="#">
+                            </picture>
                         </div>
                         <div class="wrap--partner__item">
-                            <picture><source srcset="img/partner/csm.svg" type="image/webp"><img src="img/partner/csm.svg" alt="#"></picture>
+                            <picture>
+                                <source srcset="assets/template/img/partner/csm.svg" type="image/webp">
+                                <img src="assets/template/img/partner/csm.svg" alt="#">
+                            </picture>
                         </div>
                     </div>
                     <button class="main__btn"> Получить прайс-лист</button>
@@ -52,7 +64,10 @@
                 <h2 class="calc__head">КАЛЬКУЛЯТОР ПОДБОРА МЕМБРАН ОБРАТНОГО ОСМОСА</h2>
                 <div class="calc__main">
                     <div class="rememba_img">
-                        <picture><source srcset="img/main/promp4.webp" type="image/webp"><img src="img/main/promp4.png" alt=""></picture>
+                        <picture>
+                            <source srcset="assets/template/img/main/promp4.webp" type="image/webp">
+                            <img src="assets/template/img/main/promp4.png" alt="">
+                        </picture>
                     </div>
                     <div class="calc__main--wrap">
                         <button class="calc__btn">4”</button>
@@ -83,7 +98,10 @@
                         </div>
                     </div>
                     <div class="rememba_img">
-                        <picture><source srcset="img/main/promp8.webp" type="image/webp"><img src="img/main/promp8.png" alt=""></picture>
+                        <picture>
+                            <source srcset="assets/template/img/main/promp8.webp" type="image/webp">
+                            <img src="assets/template/img/main/promp8.png" alt="">
+                        </picture>
                     </div>
                 </div>
                 <h3 class="calc__head--mobile">АНАЛОГИ ДЛЯ ВЫБРАННОЙ МЕМБРАНЫ. </h3>
@@ -154,19 +172,28 @@
                         <div class="more__wraper--top">
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/1.svg" type="image/webp"><img src="img/more/1.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/1.svg" type="image/webp">
+                                        <img src="assets/template/img/more/1.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/2.svg" type="image/webp"><img src="img/more/2.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/2.svg" type="image/webp">
+                                        <img src="assets/template/img/more/2.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/3.svg" type="image/webp"><img src="img/more/3.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/3.svg" type="image/webp">
+                                        <img src="assets/template/img/more/3.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
@@ -174,55 +201,82 @@
                         <div class="more__wraper--bottom">
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/1.svg" type="image/webp"><img src="img/more/1.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/1.svg" type="image/webp">
+                                        <img src="assets/template/img/more/1.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/2.svg" type="image/webp"><img src="img/more/2.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/2.svg" type="image/webp">
+                                        <img src="assets/template/img/more/2.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/3.svg" type="image/webp"><img src="img/more/3.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/3.svg" type="image/webp">
+                                        <img src="assets/template/img/more/3.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/1.svg" type="image/webp"><img src="img/more/1.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/1.svg" type="image/webp">
+                                        <img src="assets/template/img/more/1.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/2.svg" type="image/webp"><img src="img/more/2.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/2.svg" type="image/webp">
+                                        <img src="assets/template/img/more/2.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/3.svg" type="image/webp"><img src="img/more/3.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/3.svg" type="image/webp">
+                                        <img src="assets/template/img/more/3.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/1.svg" type="image/webp"><img src="img/more/1.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/1.svg" type="image/webp">
+                                        <img src="assets/template/img/more/1.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/2.svg" type="image/webp"><img src="img/more/2.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/2.svg" type="image/webp">
+                                        <img src="assets/template/img/more/2.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
                             <div class="more__item">
                                 <div class="more__img _ibg">
-                                    <picture><source srcset="img/more/3.svg" type="image/webp"><img src="img/more/3.svg" alt="#"></picture>
+                                    <picture>
+                                        <source srcset="assets/template/img/more/3.svg" type="image/webp">
+                                        <img src="assets/template/img/more/3.svg" alt="#">
+                                    </picture>
                                 </div>
                                 <p>Широкий ассортимент мембранных элементов для задач любой сложности.</p>
                             </div>
@@ -258,7 +312,10 @@
                         <a class="dowland-doc" href="#"></a>
                     </div>
                     <div class="circle__center">
-                        <picture><source srcset="img/tech/main.webp" type="image/webp"><img src="img/tech/main.png" alt=""></picture>
+                        <picture>
+                            <source srcset="assets/template/img/tech/main.webp" type="image/webp">
+                            <img src="assets/template/img/tech/main.png" alt="">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -278,22 +335,45 @@
                 <div class="tabs__values">
                     <div class="tab__value _tabs-block  _active">
                     <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
-                    <div class="tab__value _tabs-block">    <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                    <div class="tab__value _tabs-block">
+                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
-                    <div class="tab__value _tabs-block">    <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                    <div class="tab__value _tabs-block">
+                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
-                    <div class="tab__value _tabs-block">    <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                    <div class="tab__value _tabs-block">
+                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
-                    <div class="tab__value _tabs-block">    <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                    <div class="tab__value _tabs-block">
+                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
-                    <div class="tab__value _tabs-block">    <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
-                        <picture><source srcset="img/tabs/1.webp" type="image/webp"><img src="img/tabs/1.png" alt=""></picture>
+                    <div class="tab__value _tabs-block">
+                        <p>TMH20A 400; TMH20A 440; TMG20- 400; TMG20- 440; TMG20D- 400; TMG20D- 440; TML20D-400; TM720D-440; TM820D-440; TM820V-400; ТМН10А; TMG10; TMG10D; TM710D; TML10D; TM810C; TM810V</p>
+                        <picture>
+                            <source srcset="assets/template/img/tabs/1.webp" type="image/webp">
+                            <img src="assets/template/img/tabs/1.png" alt="">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -301,10 +381,30 @@
         <section class="tabs-section _doc-main">
             <h2 class="calc__head">СЕРТИФИКАТЫ КАЧЕСТВА</h2>
             <div class="doc_wrap ">
-                <div class="doc_block" ><picture><source srcset="img/doc/1.webp" type="image/webp"><img src="img/doc/1.png" alt=""></picture></div>
-                <div class="doc_block" ><picture><source srcset="img/doc/2.webp" type="image/webp"><img src="img/doc/2.png" alt=""></picture></div>
-                <div class="doc_block" ><picture><source srcset="img/doc/3.webp" type="image/webp"><img src="img/doc/3.png" alt=""></picture></div>
-                <div class="doc_block" ><picture><source srcset="img/doc/4.webp" type="image/webp"><img src="img/doc/4.png" alt=""></picture></div>
+                <div class="doc_block">
+                    <picture>
+                        <source srcset="assets/template/img/doc/1.webp" type="image/webp">
+                        <img src="assets/template/img/doc/1.png" alt="">
+                    </picture>
+                </div>
+                <div class="doc_block">
+                    <picture>
+                        <source srcset="assets/template/img/doc/2.webp" type="image/webp">
+                        <img src="assets/template/img/doc/2.png" alt="">
+                    </picture>
+                </div>
+                <div class="doc_block">
+                    <picture>
+                        <source srcset="assets/template/img/doc/3.webp" type="image/webp">
+                        <img src="assets/template/img/doc/3.png" alt="">
+                    </picture>
+                </div>
+                <div class="doc_block">
+                    <picture>
+                        <source srcset="assets/template/img/doc/4.webp" type="image/webp">
+                        <img src="assets/template/img/doc/4.png" alt="">
+                    </picture>
+                </div>
             </div>
         </section>
         <section class="form-block" id="form" >
@@ -335,7 +435,10 @@
         <div class="footer__content">
             <div class="footer__first">
                 <div class="footer__logo">
-                    <picture><source srcset="img/icons/logo.svg" type="image/webp"><img src="img/icons/logo.svg" alt=""></picture>
+                    <picture>
+                        <source srcset="assets/template/img/icons/logo.svg" type="image/webp">
+                        <img src="assets/template/img/icons/logo.svg" alt="">
+                    </picture>
                 </div>
                 <div class="footer__social">
                     <div class="footer__item _face"></div>
@@ -402,7 +505,6 @@
                         <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
                     </label>
                 </div>
-
             </form>
         </div>
     </div>
