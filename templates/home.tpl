@@ -79,24 +79,30 @@
                                 <h3 class="select--head">{'title_vendor' | lexicon}</h3>
                                 <select name="form[1]" class="form">
                                     <option value="zero"></option>
-                                    <option value="torey">torey</option>
-                                    <option value="CSM/Saehan/TCK">CSM/Saehan/TCK</option>
-                                    <option value="DowFilmtec">Dow Filmtec</option>
-                                    <option value="GE">GE</option>
-                                    <option value="Vontron">Vontron</option>
+                                    {'!Localizator' | snippet : [
+                                        'parents' => 3,
+                                        'limit' => 0,
+                                        'element' => 'pdoResources',
+                                        'sortby' => 'menuindex',
+                                        'sortdir' => 'DESC',
+                                        'templates' => '2'
+                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
+                                    ]}
                                 </select>
                             </div>
                             <div class="select--wraper ">
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
-                                    <option value="1">Пункт №1</option>
-                                    <option value="2">Пункт №2</option>
-                                    <option value="3">Пункт №3</option>
-                                    <option value="4">Пункт №4</option>
-                                    <option value="5">Пункт №5</option>
-                                    <option value="6">Пункт №6</option>
-                                    <option value="7">Пункт №7</option>
+                                    {'!Localizator' | snippet : [
+                                        'parents' => 4,
+                                        'limit' => 0,
+                                        'element' => 'pdoResources',
+                                        'sortby' => 'menuindex',
+                                        'sortdir' => 'DESC',
+                                        'templates' => '3'
+                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
+                                    ]}
                                 </select>
                             </div>
                         </div>
@@ -107,63 +113,19 @@
                             </picture>
                         </div>
                     </div>
-                    <h3 class="calc__head--mobile">АНАЛОГИ ДЛЯ ВЫБРАННОЙ МЕМБРАНЫ. </h3>
-                    <h3 class="calc__head--mobile">СРАВНИТЕЛЬНЫЕ ХАРАКТЕРИСТИКИ</h3>
+                    <h3 class="calc__head--mobile">{'calc_analog_title' | lexicon}</h3>
+                    <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
                     <div class="_mobile--more">{'title_show' | lexicon}</div>
                     <div class="calc--wraper scroll-block">
-                        <table class="_calc__table">
-                            <tr class="first_tr">
-                                <td>Название и модель</td>
-                                <td>Производитель
-                                    м3/день</td>
-                                <td>Производитель</td>
-                                <td>Рабочее
-                                    давление,
-                                    БАР</td>
-                                <td>Толщина сепарирующей сетки, мил</td>
-                                <td>Концентрация солей в исходной воде для тестовых испытаний, мг/л NaCl</td>
-                            </tr>
-                            <tr>
-                                <td class="hit"></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
+                        {'!pdoResources' | snippet : [
+                            'parents' => 0,
+                            'depth' => 2,
+                            'limit' => 0,
+                            'includeTVs' => 'model_characteristics',
+                            'tvPrefix' => '',
+                            'templates' => 3,
+                            'tpl' => '@FILE chunks/model_item.tpl'
+                        ]}
                     </div>
                 </div>
             </section>
@@ -317,7 +279,7 @@
                     <p class="politica__footer">© {'' | date : 'Y'} {'title_rights' | lexicon}</p>
                 </div>
                 <div class="footer__third">
-                    <h4 class="footer__third--head">Наши контакты:</h4>
+                    <h4 class="footer__third--head">{$_modx->resource.contacts_title}</h4>
                     <a href="tel:{$_modx->resource.phone  | preg_replace : '/[^0-9+]/' : ''}" class="footer__third--item">{$_modx->resource.phone}</a>
                     <p class="footer__third--item">{$_modx->resource.city}</p>
                     <p class="footer__third--item">{$_modx->resource.street}</p>
@@ -327,7 +289,7 @@
         </footer>
         <div class="cookie _active">
             <div class="cookie__left">
-                <p>Этот сайт использует файлы cookie. Более подробные данные вы можете найти в политике по защите персональных данных</p>
+                <p>{$_modx->resource.cookie_text}</p>
                 <br>
                 <p class="politica__footer">{'title_policy' | lexicon}</p>
             </div>
@@ -339,12 +301,7 @@
             <div class="popup__body">
                 <div class="popup__close"></div>
                 <h1>{'title_policy' | lexicon}</h1>
-                <h3>Заглавие</h3>
-                <p>Повседневная практика показывает, что базовый вектор развития позволяет оценить значение инновационных методов управления процессами! Каждый из нас понимает очевидную вещь: понимание сути ресурсосберегающих технологий способствует подготовке и реализации дальнейших направлений развития.
-                    <br>1. В своём стремлении улучшить пользовательский опыт . мы упускаем, что элементы политического процесса. превращены в посмешище, хотя само их существование приносит несомненную пользу.обществу. Современные технологии достигли такого уровня, что укрепление и развитие внутренней структуры играет важную роль в формировании кластеризации усилий. Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и объявлены нарушающими общечеловеческие нормы этики и морали. Многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. Активно развивающиеся страны третьего мира будут функционально разнесены на независимые элементы. Прежде всего, высококачественный прототип будущего проекта играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
-                <h3>Заглавие</h3>
-                <p>Повседневная практика показывает, что базовый вектор развития позволяет оценить значение инновационных методов управления процессами! Каждый из нас понимает очевидную вещь: понимание сути ресурсосберегающих технологий способствует подготовке и реализации дальнейших направлений развития.
-                    <br>1. В своём стремлении улучшить пользовательский опыт . мы упускаем, что элементы политического процесса. превращены в посмешище, хотя само их существование приносит несомненную пользу.обществу. Современные технологии достигли такого уровня, что укрепление и развитие внутренней структуры играет важную роль в формировании кластеризации усилий. Имеется спорная точка зрения, гласящая примерно следующее: активно развивающиеся страны третьего мира лишь добавляют фракционных разногласий и объявлены нарушающими общечеловеческие нормы этики и морали. Многие известные личности, инициированные исключительно синтетически, представлены в исключительно положительном свете. Активно развивающиеся страны третьего мира будут функционально разнесены на независимые элементы. Прежде всего, высококачественный прототип будущего проекта играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                {$_modx->resource.text_policy}
             </div>
         </div>
     </div>
