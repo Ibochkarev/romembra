@@ -62,7 +62,7 @@
                     <button class="main__btn"> {'btn_get_price' | lexicon}</button>
                 </div>
             </div>
-            <section class="calc" >
+            <section class="calc _tabs" >
                 <div class="calc__wrap">
                     <h2 class="calc__head">{$_modx->resource.calc_title}</h2>
                     <div class="calc__main">
@@ -73,8 +73,18 @@
                             </picture>
                         </div>
                         <div class="calc__main--wrap">
-                            <button class="calc__btn">4”</button>
-                            <button class="calc__btn">8”</button>
+                            <button class="calc__btn _tabs-item">4”</button>
+                            <button class="calc__btn _tabs-item">8”</button>
+                        </div>
+                        <div class="rememba_img">
+                            <picture>
+                                <source srcset="assets/template/img/main/promp8.webp" type="image/webp">
+                                <img src="assets/template/img/main/promp8.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="wraper__tabov  _tabs-block _active">
+                        <div class="wraper__tabov--select">
                             <div class="select--wraper">
                                 <h3 class="select--head">{'title_vendor' | lexicon}</h3>
                                 <select name="form[1]" class="form">
@@ -85,7 +95,7 @@
                                         'element' => 'pdoResources',
                                         'sortby' => 'menuindex',
                                         'sortdir' => 'DESC',
-                                        'templates' => '2'
+                                        'templates' => 2,
                                         'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
                                     ]}
                                 </select>
@@ -95,37 +105,79 @@
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
                                     {'!Localizator' | snippet : [
-                                        'parents' => 4,
+                                        'parents' => 3,
                                         'limit' => 0,
                                         'element' => 'pdoResources',
                                         'sortby' => 'menuindex',
                                         'sortdir' => 'DESC',
-                                        'templates' => '3'
+                                        'templates' => 3,
                                         'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
                                     ]}
                                 </select>
                             </div>
                         </div>
-                        <div class="rememba_img">
-                            <picture>
-                                <source srcset="assets/template/img/main/promp8.webp" type="image/webp">
-                                <img src="assets/template/img/main/promp8.png" alt="">
-                            </picture>
+                        <h3 class="calc__head--mobile">{'calc_analog_title' | lexicon}</h3>
+                        <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
+                        <div class="_mobile--more">{'title_show' | lexicon}</div>
+                        <div class="calc--wraper scroll-block">
+                            {'!pdoResources' | snippet : [
+                                'parents' => 3,
+                                'depth' => 2,
+                                'limit' => 0,
+                                'includeTVs' => 'model_characteristics',
+                                'tvPrefix' => '',
+                                'templates' => 3,
+                                'tpl' => '@FILE chunks/model_item.tpl'
+                            ]}
                         </div>
                     </div>
-                    <h3 class="calc__head--mobile">{'calc_analog_title' | lexicon}</h3>
-                    <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
-                    <div class="_mobile--more">{'title_show' | lexicon}</div>
-                    <div class="calc--wraper scroll-block">
-                        {'!pdoResources' | snippet : [
-                            'parents' => 0,
-                            'depth' => 2,
-                            'limit' => 0,
-                            'includeTVs' => 'model_characteristics',
-                            'tvPrefix' => '',
-                            'templates' => 3,
-                            'tpl' => '@FILE chunks/model_item.tpl'
-                        ]}
+                    <div class="wraper__tabov  _tabs-block">
+                        <div class="wraper__tabov--select">
+                            <div class="select--wraper">
+                                <h3 class="select--head">{'title_vendor' | lexicon}</h3>
+                                <select name="form[1]" class="form">
+                                    <option value="zero"></option>
+                                    {'!Localizator' | snippet : [
+                                        'parents' => 12,
+                                        'limit' => 0,
+                                        'element' => 'pdoResources',
+                                        'sortby' => 'menuindex',
+                                        'sortdir' => 'DESC',
+                                        'templates' => 2,
+                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
+                                    ]}>
+                                </select>
+                            </div>
+                            <div class="select--wraper ">
+                                <h3 class="select--head">{'title_model' | lexicon}</h3>
+                                <select name="form[2]" class="form">
+                                    <option value="zero"></option>
+                                    {'!Localizator' | snippet : [
+                                        'parents' => 12,
+                                        'limit' => 0,
+                                        'element' => 'pdoResources',
+                                        'sortby' => 'menuindex',
+                                        'sortdir' => 'DESC',
+                                        'templates' => 3,
+                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
+                                    ]}
+                                </select>
+                            </div>
+                        </div>
+                        <h3 class="calc__head--mobile">{'calc_analog_title' | lexicon}</h3>
+                        <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
+                        <div class="_mobile--more">{'title_show' | lexicon}</div>
+                        <div class="calc--wraper scroll-block">
+                            {'!pdoResources' | snippet : [
+                                'parents' => 12,
+                                'depth' => 2,
+                                'limit' => 0,
+                                'includeTVs' => 'model_characteristics',
+                                'tvPrefix' => '',
+                                'templates' => 3,
+                                'tpl' => '@FILE chunks/model_item.tpl'
+                            ]}
+                        </div>
                     </div>
                 </div>
             </section>
