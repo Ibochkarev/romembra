@@ -94,7 +94,7 @@
                                         'limit' => 0,
                                         'element' => 'pdoResources',
                                         'sortby' => 'menuindex',
-                                        'sortdir' => 'DESC',
+                                        'sortdir' => 'ASC',
                                         'templates' => 2,
                                         'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
                                     ]}
@@ -104,17 +104,33 @@
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
-                                    {'!Localizator' | snippet : [
+                                    {*'!Localizator' | snippet : [
                                         'parents' => 3,
                                         'limit' => 0,
                                         'element' => 'pdoResources',
                                         'sortby' => 'menuindex',
                                         'sortdir' => 'DESC',
                                         'templates' => 3,
-                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
-                                    ]}
+                                        'tpl' => '@INLINE <option value="{$alias}" data-vendor="{$parent_obj.alias}">{$pagetitle}</option>'
+                                    ]*}
                                 </select>
                             </div>
+                            <script>
+                            const models = [
+                                {'!Localizator' | snippet : [
+                                    'parents' => '3, 12',
+                                    'limit' => 0,
+                                    'element' => 'pdoResources',
+                                    'sortby' => 'menuindex',
+                                    'sortdir' => 'ASC',
+                                    'templates' => 3,
+                                    'tpl' => '@INLINE
+                                        {set $parent_resource = $parent | resource}
+                                        {set $type_resource = $parent_resource.parent | resource}
+                                        ["{$parent_resource.alias}", "{$alias}", "{$pagetitle}", "{$type_resource.pagetitle}"],',
+                                ]}
+                            ];
+                            </script>
                         </div>
                         <h3 class="calc__head--mobile">{'calc_analog_title' | lexicon}</h3>
                         <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
@@ -142,7 +158,7 @@
                                         'limit' => 0,
                                         'element' => 'pdoResources',
                                         'sortby' => 'menuindex',
-                                        'sortdir' => 'DESC',
+                                        'sortdir' => 'ASC',
                                         'templates' => 2,
                                         'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
                                     ]}>
@@ -152,7 +168,7 @@
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
-                                    {'!Localizator' | snippet : [
+                                    {* {'!Localizator' | snippet : [
                                         'parents' => 12,
                                         'limit' => 0,
                                         'element' => 'pdoResources',
@@ -160,7 +176,7 @@
                                         'sortdir' => 'DESC',
                                         'templates' => 3,
                                         'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
-                                    ]}
+                                    ]} *}
                                 </select>
                             </div>
                         </div>
@@ -188,9 +204,9 @@
                         <div class="more__wraper">
                             <div class="more__wraper--top">
 
-                                {set $items = $_modx->resource.benefits_list | fromJSON}
-                                {foreach $items as $item}
-                                {set $image = 'assets/media/' ~ $item.image}
+                            {set $items = $_modx->resource.benefits_list | fromJSON}
+                            {foreach $items as $idx => $item}
+                            {set $image = 'assets/media/' ~ $item.image}
                                 <div class="more__item">
                                     <div class="more__img _ibg">
                                         <picture>
@@ -199,8 +215,11 @@
                                     </div>
                                     <p>{$item.text}</p>
                                 </div>
-                                {/foreach}
-
+                            {if $idx == 2}
+                            </div>
+                            <div class="more__wraper--bottom">
+                            {/if}
+                            {/foreach}
                             </div>
                         </div>
                         <div class="more_btn">
@@ -339,7 +358,7 @@
                 </div>
             </div>
         </footer>
-        <div class="cookie _active">
+        <div class="cookie">
             <div class="cookie__left">
                 <p>{$_modx->resource.cookie_text}</p>
                 <br>

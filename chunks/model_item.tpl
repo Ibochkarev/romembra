@@ -2,7 +2,7 @@
 {set $alias_parent_2 = $alias}
 {set $id_table =  $alias_parent ~ '_' ~ $alias_parent_2}
 
-<table class="_calc__table" id="{$id_table}">
+<table class="_calc__table d-none" id="{$id_table}">
     <tr class="first_tr">
         <td>{'table_td_1' | lexicon}</td>
         <td>{'table_td_2' | lexicon}</td>

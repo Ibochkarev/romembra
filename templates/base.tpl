@@ -41,6 +41,25 @@
     {/block}
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/template/js/vendors.min.js"></script>
-    <script src="assets/template/js/app.min.js"></script>
+    <script src="assets/template/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/template/js/js.cookie.min.js"></script>
+    {* <script src="assets/template/js/app.min.js"></script> *}
+    <script>
+    $(document).ready(function () {
+        if (!Cookies.get('visit')) {
+            $('.cookie').addClass('_active');
+        }
+        $(document).on('click', '.btn-cookie', function () {
+            $('.cockie').removeClass('_active');
+                setTimeout(function () {
+                Cookies.set('visit', 'true', {
+                    expires: 7,
+                    path: '/',
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>
