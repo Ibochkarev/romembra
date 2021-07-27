@@ -40,33 +40,33 @@
             </div>
         </div>
         <main class="page">
-            <div class="page_head">
+            <div class="page_head _scr-item">
                 <div class="head--wrap">
                     <picture>
                         <source srcset="{$_modx->resource.banner_img}" type="image/webp">
-                        <img class="main__ibg" src="{$_modx->resource.banner_img}" alt="">
+                        <img class="main__ibg _scr-item" src="{$_modx->resource.banner_img}" alt="">
                     </picture>
-                    <h1 class="head--wrap__header"{$_modx->resource.banner_text}</h1>
+                    <h1 class="head--wrap__header _scr-item _points"{$_modx->resource.banner_text}</h1>
                     <div class="head--wrap__partner">
-                        <div class="wrap--partner__item">
+                        <div class="wrap--partner__item _scr-item _points">
                             <picture>
                                 <img src="{$_modx->resource.banner_partner_1}" alt="">
                             </picture>
                         </div>
-                        <div class="wrap--partner__item">
+                        <div class="wrap--partner__item _scr-item _points">
                             <picture>
                                 <img src="{$_modx->resource.banner_partner_2}" alt="">
                             </picture>
                         </div>
                     </div>
-                    <button class="main__btn"> {'btn_get_price' | lexicon}</button>
+                    <button class="main__btn _scr-item _points"> {'btn_get_price' | lexicon}</button>
                 </div>
             </div>
-            <section class="calc _tabs" >
+            <section class="calc _tabs _scr-item" >
                 <div class="calc__wrap">
-                    <h2 class="calc__head">{$_modx->resource.calc_title}</h2>
+                    <h2 class="calc__head _scr-item">{$_modx->resource.calc_title}</h2>
                     <div class="calc__main">
-                        <div class="rememba_img">
+                        <div class="rememba_img _scr-item _right">
                             <picture>
                                 <source srcset="assets/template/img/main/promp4.webp" type="image/webp">
                                 <img src="assets/template/img/main/promp4.png" alt="">
@@ -76,16 +76,16 @@
                             <button class="calc__btn _tabs-item">4”</button>
                             <button class="calc__btn _tabs-item">8”</button>
                         </div>
-                        <div class="rememba_img">
+                        <div class="rememba_img _scr-item _left">
                             <picture>
                                 <source srcset="assets/template/img/main/promp8.webp" type="image/webp">
                                 <img src="assets/template/img/main/promp8.png" alt="">
                             </picture>
                         </div>
                     </div>
-                    <div class="wraper__tabov  _tabs-block _active">
+                    <div class="wraper__tabov _tabs-block _active">
                         <div class="wraper__tabov--select">
-                            <div class="select--wraper">
+                            <div class="select--wraper _first">
                                 <h3 class="select--head">{'title_vendor' | lexicon}</h3>
                                 <select name="form[1]" class="form">
                                     <option value="zero"></option>
@@ -100,7 +100,7 @@
                                     ]}
                                 </select>
                             </div>
-                            <div class="select--wraper ">
+                            <div class="select--wraper _second">
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
@@ -136,6 +136,7 @@
                         <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
                         <div class="_mobile--more">{'title_show' | lexicon}</div>
                         <div class="calc--wraper scroll-block">
+                            <div class="touch touch_1"><img src="assets/template/img/icons/touch.svg" alt=""></div>
                             {'!pdoResources' | snippet : [
                                 'parents' => 3,
                                 'depth' => 2,
@@ -149,7 +150,7 @@
                     </div>
                     <div class="wraper__tabov  _tabs-block">
                         <div class="wraper__tabov--select">
-                            <div class="select--wraper">
+                            <div class="select--wraper _first">
                                 <h3 class="select--head">{'title_vendor' | lexicon}</h3>
                                 <select name="form[1]" class="form">
                                     <option value="zero"></option>
@@ -164,7 +165,7 @@
                                     ]}>
                                 </select>
                             </div>
-                            <div class="select--wraper ">
+                            <div class="select--wraper _second">
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
@@ -184,6 +185,7 @@
                         <h3 class="calc__head--mobile">{'calc_comparative_title' | lexicon}</h3>
                         <div class="_mobile--more">{'title_show' | lexicon}</div>
                         <div class="calc--wraper scroll-block">
+                            <div class="touch touch_2"><img src="assets/template/img/icons/touch.svg" alt="">/div>
                             {'!pdoResources' | snippet : [
                                 'parents' => 12,
                                 'depth' => 2,
@@ -195,11 +197,12 @@
                             ]}
                         </div>
                     </div>
+                    <button class="btn__table">Оставить заявку</button>
                 </div>
             </section>
-            <section class="more">
+            <section class="more _scr-item">
                 <div class="calc__wrap">
-                    <h2 class="calc__head">{$_modx->resource.benefits_title}</h2>
+                    <h2 class="calc__head _scr-item">{$_modx->resource.benefits_title}</h2>
                     <div class="more__wraper">
                         <div class="more__wraper">
                             <div class="more__wraper--top">
@@ -235,23 +238,23 @@
                     </div>
                 </div>
             </section>
-            <section class="circle">
+            <section class="circle _scr-item">
                 <div class="circle__wraper">
-                    <h2 class="calc__head">{$_modx->resource.tech_title}</h2>
+                    <h2 class="calc__head _scr-item">{$_modx->resource.tech_title}</h2>
                     <div class="circle__main">
-                        <div class="circle__item _left-top">
-                            <p>{$_modx->resource.tech_download_title_1}</p>
-                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_1}" download></a>
+                        <div class="circle__item _left-top _scr-item _right">
+                            <p class="_scr-item _right">{$_modx->resource.tech_download_title_1}</p>
+                            <a class="dowland-doc  _scr-item _right" href="{$_modx->resource.tech_download_file_1}" download></a>
                         </div>
-                        <div class="circle__item _right-top">
-                            <p>{$_modx->resource.tech_download_title_2}</p>
-                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_2}" download></a>
+                        <div class="circle__item _right-top _scr-item _left">
+                            <p class="_scr-item _left">{$_modx->resource.tech_download_title_2}</p>
+                            <a class="dowland-doc  _scr-item _left" href="{$_modx->resource.tech_download_file_2}" download></a>
                         </div>
                         <div class="circle__item _right-bottom">
-                            <p>{$_modx->resource.tech_download_title_3}</p>
-                            <a class="dowland-doc" href="{$_modx->resource.tech_download_file_3}" download></a>
+                            <p class="_scr-item _left">{$_modx->resource.tech_download_title_3}</p>
+                            <a class="dowland-doc _scr-item _left" href="{$_modx->resource.tech_download_file_3}" download></a>
                         </div>
-                        <div class="circle__center">
+                        <div class="circle__center _scr-item _circle">
                             <picture>
                                 <source srcset="assets/template/img/tech/main.webp" type="image/webp">
                                 <img src="assets/template/img/tech/main.png" alt="">
@@ -259,10 +262,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="item_decoretion"></div>
+                <div class="item_decoretion _scr-item _right"></div>
             </section>
-            <section class="tabs-section">
-                <h2 class="calc__head">{$_modx->resource.popular_title}</h2>
+            <section class="tabs-section _scr-item">
+                <h2 class="calc__head _scr-item">{$_modx->resource.popular_title}</h2>
                 <div class="tabs__wraper _tabs">
                     <div class="tabs__points">
 
@@ -289,8 +292,38 @@
                     </div>
                 </div>
             </section>
-            <section class="tabs-section _doc-main">
-                <h2 class="calc__head">{$_modx->resource.certificats_title}</h2>
+
+            <section class="form-block _scr-item" id="form" >
+                <h2 class="calc__head _scr-item">Оставить заявку</h2>
+                <h3 class="form_subtitle">Чтобы узнать наличие на складе и цену мембраны</h3>
+                <form action="#" class="form_footer">
+                    <input type="text" class="input _reg" required placeholder="Имя">
+                    <input type="text" class="input _reg _phone" id="phone" required placeholder="+38 (---) --- -- --">
+                    <input type="email"  class="input _reg" required placeholder="e-mail">
+                    <div class="footer_form">
+                        <button class="btn-footer" type="submit">Отправить</button>
+                        <div class="checkbox__wrap">
+                            <label class="checkbox">
+                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+
+                                <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
+                            </label>
+                            <label class="checkbox">
+                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+
+                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <section class="_footer--succes">
+                    <h2 class="calc__head">{'success_form_title' | lexicon}</h2>
+                    <h3 class="sub__success">{'success_form_subtitle' | lexicon}</h3>
+                    {'success_form_text' | lexicon}
+                </section>
+            </section>
+            <section class="tabs-section _doc-main _scr-item">
+                <h2 class="calc__head _scr-item">{$_modx->resource.certificats_title}</h2>
                 <div class="doc_wrap ">
 
                     {set $items = $_modx->resource.certificats_list | fromJSON}
@@ -306,31 +339,8 @@
 
                 </div>
             </section>
-            <section class="form-block" id="form" >
-                <h2 class="calc__head">Оставить заявку</h2>
-                <h3 class="form_subtitle">Чтобы узнать наличие на складе и цену мембраны</h3>
-                <form action="#" class="form_footer">
-                    <input type="text" class="input _reg" required placeholder="Имя">
-                    <input type="text" class="input _reg _phone" id="phone" required placeholder="+38 (---) --- -- --">
-                    <input type="email"  class="input _reg" required placeholder="e-mail">
-                    <div class="footer_form">
-                        <button class="btn-footer" type="submit">Отправить</button>
-                        <label class="checkbox">
-                            <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
-
-                            <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
-                        </label>
-                    </div>
-                </form>
-                <section class="_footer--succes">
-                    <h2 class="calc__head">Прайс отправлен</h2>
-                    <h3 class="sub__success">Нашли мембраны существенно дешевле?</h3>
-                    <p>Мы официальные импортеры мембран TCK (CSM) и TORAY в Украине.</p>
-                    <p>Узнайте по номеру модели, Вы нашли оригинал или подделку.</p>
-                </section>
-            </section>
         </main>
-        <footer class="footer">
+        <footer class="footer _scr-item">
             <div class="footer__content">
                 <div class="footer__first">
                     <div class="footer__logo">
@@ -376,28 +386,73 @@
             </div>
         </div>
     </div>
-    <div class="popup popup_massagename-message">
+    <div class="popup popup_massagename-message-table">
         <div class="popup__content">
 
             <div class="popup__body">
                 <section class="_footer--succes">
-                    <h2 class="calc__head">Прайс отправлен</h2>
-                    <h3 class="sub__success">Нашли мембраны существенно дешевле?</h3>
                     <p>Мы официальные импортеры мембран TCK (CSM) и TORAY в Украине.</p>
                     <p>Узнайте по номеру модели, Вы нашли оригинал или подделку.</p>
                 </section>
                 <div class="popup__close"></div>
                 <form action="#" class="form_footer">
+                    <h2 class="calc__head _scr-item">Оставить заявку</h2>
+                    <h3 class="sub__success">Чтобы узнать наличие и цену мембраны</h3>
+                    <input type="text" class="input _reg" required placeholder="Имя">
+                    <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
+                    <input type="email"  class="input _reg" required placeholder="e-mail">
+                    <input type="text"  name="Product" class="input" required placeholder="Product">
+                        <div class="footer_form">
+                        <button class="btn-footer" type="submit">Отправить</button>
+                        <div class="checkbox__wrap">
+                            <label class="checkbox">
+                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+
+                                <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
+                            </label>
+                            <label class="checkbox">
+                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+
+                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup_massagename-message">
+        <div class="popup__content">
+
+            <div class="popup__body">
+                <section class="_footer--succes">
+                    <h2 class="calc__head">{'success_form_title' | lexicon}</h2>
+                    <h3 class="sub__success">{'success_form_subtitle' | lexicon}</h3>
+                    {'success_form_text' | lexicon}
+                </section>
+                <div class="popup__close"></div>
+                <form action="#" class="form_footer">
+                    <h2 class="calc__head _scr-item">Оставить заявку</h2>
+                    <h3 class="sub__success">Чтобы узнать наличие и цену мембраны</h3>
                     <input type="text" class="input _reg" required placeholder="Имя">
                     <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
                     <input type="email"  class="input _reg" required placeholder="e-mail">
                     <div class="footer_form">
                         <button class="btn-footer" type="submit">Отправить</button>
-                        <label class="checkbox">
-                            <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
+                        <div class="checkbox__wrap">
+                            <label class="checkbox">
+                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                            <p class="checkbox__text  checkbox__header">{'btn_get_price' | lexicon}</p>
-                        </label>
+                                <p class="checkbox__text  checkbox__header">{'btn_get_price' | lexicon}</p>
+                            </label>
+                            <label class="checkbox">
+                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+
+                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                            </label>
+                        </div>
                     </div>
                 </form>
             </div>
