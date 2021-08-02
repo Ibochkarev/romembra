@@ -1,7 +1,7 @@
 {extends 'file:templates/base.tpl'}
 
 {block 'main'}
-<body class="scroll-block">
+<body class="scroll-block" itemscope itemtype="http://schema.org/WebPage">
     <div class="wrapper">
         <header class="header">
             <div class="header__content">

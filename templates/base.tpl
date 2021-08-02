@@ -35,6 +35,91 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {if $_modx->config.cultureKey == 'ua'}
+        <link rel="alternate" href="romembra.zeus.blender.team/ru{$_modx->makeUrl($_modx->resource.id)}" hreflang="ru" />
+        {else}
+        <link rel="alternate" href="romembra.zeus.blender.team{$_modx->makeUrl($_modx->resource.id)}" hreflang="uk" />
+        {/if}
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "{'site_url'|config}",
+        "logo": {
+            "url": "{'site_url'|config}assets/template/img/icons/logo.svg",
+            "width": "110",
+            "@context": "http://schema.org",
+            "@type": "ImageObject"
+        },
+        "sameAs": [
+            "{'fb' | config}",
+            "{'instagram' | config}"
+        ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "{($_modx->resource.longtitle ? : $_modx->resource.pagetitle) | replace: '"': ''}",
+        "description": "{$_modx->resource.description | replace: '"': ''}}"
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{'site_name' | config}",
+        "image": [
+            "{'site_url'|config}assets/template/img/icons/logo.svg"
+        ],
+        {if $_modx->config.cultureKey == 'ru'}
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Зоологическая 5а",
+            "addressLocality": "Киев",
+            "addressRegion": "Киевская область",
+            "postalCode": "02000",
+            "addressCountry": "UA"
+        },
+        {else}
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "вул. Зоологічна 5а",
+            "addressLocality": "Харків",
+            "addressRegion": "Київська область",
+            "postalCode": "02000",
+            "addressCountry": "UA"
+        },
+        {/if}
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.4599322,
+            "longitude": 30.4580605
+        },
+        "url": "{'site_url' | config}",
+        "telephone": "{$_modx->resource.phone}",
+        {* "email":  "mailto:{'email' | config}", *}
+        "priceRange": "Грн",
+        "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        }
+        ]}
+        </script>
     </head>
     {block 'main'}
 
