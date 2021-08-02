@@ -197,7 +197,7 @@
                             ]}
                         </div>
                     </div>
-                    <button class="btn__table">Оставить заявку</button>
+                    <button class="btn__table">{'submit_your_application' | lexicon}</button>
                 </div>
             </section>
             <section class="more _scr-item">
@@ -294,24 +294,24 @@
             </section>
 
             <section class="form-block _scr-item" id="form" >
-                <h2 class="calc__head _scr-item">Оставить заявку</h2>
-                <h3 class="form_subtitle">Чтобы узнать наличие на складе и цену мембраны</h3>
+                <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
+                <h3 class="form_subtitle">{'check_availability' | lexicon}</h3>
                 <form action="#" class="form_footer">
-                    <input type="text" class="input _reg" required placeholder="Имя">
+                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
                     <input type="text" class="input _reg _phone" id="phone" required placeholder="+38 (---) --- -- --">
                     <input type="email"  class="input _reg" required placeholder="e-mail">
                     <div class="footer_form">
-                        <button class="btn-footer" type="submit">Отправить</button>
+                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
                         <div class="checkbox__wrap">
                             <label class="checkbox">
                                 <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
+                                <p class="checkbox__text  checkbox__header">{'get_price_list' | lexicon}</p>
                             </label>
                             <label class="checkbox">
                                 <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
                             </label>
                         </div>
                     </div>
@@ -360,7 +360,7 @@
                     <p class="politica__footer">© {'' | date : 'Y'} {'title_rights' | lexicon}</p>
                 </div>
                 <div class="footer__third">
-                    <h4 class="footer__third--head">{$_modx->resource.contacts_title}</h4>
+                    <p class="footer__third--head">{$_modx->resource.contacts_title}</p>
                     <a href="tel:{$_modx->resource.phone  | preg_replace : '/[^0-9+]/' : ''}" class="footer__third--item">{$_modx->resource.phone}</a>
                     <p class="footer__third--item">{$_modx->resource.city}</p>
                     <p class="footer__third--item">{$_modx->resource.street}</p>
@@ -381,7 +381,7 @@
         <div class="popup__content">
             <div class="popup__body">
                 <div class="popup__close"></div>
-                <h1>{'title_policy' | lexicon}</h1>
+                <p class="politic-head">{'title_policy' | lexicon}</p>
                 {$_modx->resource.text_policy}
             </div>
         </div>
@@ -391,29 +391,28 @@
 
             <div class="popup__body">
                 <section class="_footer--succes">
-                    <p>Мы официальные импортеры мембран TCK (CSM) и TORAY в Украине.</p>
-                    <p>Узнайте по номеру модели, Вы нашли оригинал или подделку.</p>
+                    {$_modx->resource.popup_text}
                 </section>
                 <div class="popup__close"></div>
                 <form action="#" class="form_footer">
-                    <h2 class="calc__head _scr-item">Оставить заявку</h2>
-                    <h3 class="sub__success">Чтобы узнать наличие и цену мембраны</h3>
-                    <input type="text" class="input _reg" required placeholder="Имя">
+                    <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
+                    <h3 class="sub__success">{'get_availability_and_price' | lexicon}</h3>
+                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
                     <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
                     <input type="email"  class="input _reg" required placeholder="e-mail">
                     <input type="text"  name="Product" class="input" required placeholder="Product">
                         <div class="footer_form">
-                        <button class="btn-footer" type="submit">Отправить</button>
+                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
                         <div class="checkbox__wrap">
                             <label class="checkbox">
                                 <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header">ПОЛУЧИТЬ ПРАЙС-ЛИСТ</p>
+                                <p class="checkbox__text  checkbox__header">{'get_price_list' | lexicon}</p>
                             </label>
                             <label class="checkbox">
                                 <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
                             </label>
                         </div>
 
@@ -434,13 +433,13 @@
                 </section>
                 <div class="popup__close"></div>
                 <form action="#" class="form_footer">
-                    <h2 class="calc__head _scr-item">Оставить заявку</h2>
-                    <h3 class="sub__success">Чтобы узнать наличие и цену мембраны</h3>
-                    <input type="text" class="input _reg" required placeholder="Имя">
+                    <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
+                    <h3 class="sub__success">{'get_availability_and_price' | lexicon}</h3>
+                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
                     <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
                     <input type="email"  class="input _reg" required placeholder="e-mail">
                     <div class="footer_form">
-                        <button class="btn-footer" type="submit">Отправить</button>
+                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
                         <div class="checkbox__wrap">
                             <label class="checkbox">
                                 <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
@@ -450,7 +449,7 @@
                             <label class="checkbox">
                                 <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header" >Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных</p>
+                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
                             </label>
                         </div>
                     </div>
