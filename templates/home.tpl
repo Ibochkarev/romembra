@@ -104,15 +104,6 @@
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
-                                    {*'!Localizator' | snippet : [
-                                        'parents' => 3,
-                                        'limit' => 0,
-                                        'element' => 'pdoResources',
-                                        'sortby' => 'menuindex',
-                                        'sortdir' => 'DESC',
-                                        'templates' => 3,
-                                        'tpl' => '@INLINE <option value="{$alias}" data-vendor="{$parent_obj.alias}">{$pagetitle}</option>'
-                                    ]*}
                                 </select>
                             </div>
                             <script>
@@ -169,15 +160,6 @@
                                 <h3 class="select--head">{'title_model' | lexicon}</h3>
                                 <select name="form[2]" class="form">
                                     <option value="zero"></option>
-                                    {* {'!Localizator' | snippet : [
-                                        'parents' => 12,
-                                        'limit' => 0,
-                                        'element' => 'pdoResources',
-                                        'sortby' => 'menuindex',
-                                        'sortdir' => 'DESC',
-                                        'templates' => 3,
-                                        'tpl' => '@INLINE <option value="{$alias}">{$pagetitle}</option>'
-                                    ]} *}
                                 </select>
                             </div>
                         </div>
@@ -296,26 +278,30 @@
             <section class="form-block _scr-item" id="form" >
                 <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
                 <h3 class="form_subtitle">{'check_availability' | lexicon}</h3>
-                <form action="#" class="form_footer">
-                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
-                    <input type="text" class="input _reg _phone" id="phone" required placeholder="+38 (---) --- -- --">
-                    <input type="email"  class="input _reg" required placeholder="e-mail">
-                    <div class="footer_form">
-                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
-                        <div class="checkbox__wrap">
-                            <label class="checkbox">
-                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header">{'get_price_list' | lexicon}</p>
-                            </label>
-                            <label class="checkbox">
-                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+                {if $_modx->config.cultureKey == 'ru'}
+                    {set $error_message = 'В форме содержатся ошибки!'}
+                    {set $success_message = 'Сообщение успешно отправлено'}
+                {else}
+                    {set $error_message = 'У формі містяться помилки!'}
+                    {set $success_message = 'Повідомлення успішно відправлено'}
+                {/if}
 
-                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
-                            </label>
-                        </div>
-                    </div>
-                </form>
+                {'!AjaxForm' | snippet:[
+                    'hooks' => 'FormItSaveForm,email',
+                    'form' => '@FILE chunks/forms/form_item.tpl',
+                    'emailTo' => ('email_to' | option),
+                    'emailCC' => ('email_to' | option),
+                    'emailFrom' => 'emailsender' | config,
+                    'emailSubject' => 'Новая заявка',
+                    'emailTpl' => '@FILE chunks/forms/email.tpl',
+                    'validate' => 'name:required,phone:required,agreement:required,politic:required,workemail:blank',
+                    'validationErrorMessage' => $error_message,
+                    'successMessage' => '',
+                    'formName' => 'Новая заявка',
+                    'formFields' => 'name,phone,email'
+                ]}
+
                 <section class="_footer--succes">
                     <h2 class="calc__head">{'success_form_title' | lexicon}</h2>
                     <h3 class="sub__success">{'success_form_subtitle' | lexicon}</h3>
@@ -394,31 +380,22 @@
                     {$_modx->resource.popup_text}
                 </section>
                 <div class="popup__close"></div>
-                <form action="#" class="form_footer">
-                    <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
-                    <h3 class="sub__success">{'get_availability_and_price' | lexicon}</h3>
-                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
-                    <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
-                    <input type="email"  class="input _reg" required placeholder="e-mail">
-                    <input type="text"  name="Product" class="input" required placeholder="Product">
-                        <div class="footer_form">
-                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
-                        <div class="checkbox__wrap">
-                            <label class="checkbox">
-                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header">{'get_price_list' | lexicon}</p>
-                            </label>
-                            <label class="checkbox">
-                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+                {'!AjaxForm' | snippet:[
+                    'hooks' => 'FormItSaveForm,email',
+                    'form' => '@FILE chunks/forms/form_footer.tpl',
+                    'emailTo' => ('email_to' | option),
+                    'emailCC' => ('email_to' | option),
+                    'emailFrom' => 'emailsender' | config,
+                    'emailSubject' => 'Новая заявка',
+                    'emailTpl' => '@FILE chunks/forms/email.tpl',
+                    'validate' => 'name:required,phone:required,agreement:required,politic:required,workemail:blank',
+                    'validationErrorMessage' => $error_message,
+                    'successMessage' => '',
+                    'formName' => 'Новая заявка',
+                    'formFields' => 'name,phone,email,Product'
+                ]}
 
-                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
-                            </label>
-                        </div>
-
-                    </div>
-
-                </form>
             </div>
         </div>
     </div>
@@ -432,28 +409,22 @@
                     {'success_form_text' | lexicon}
                 </section>
                 <div class="popup__close"></div>
-                <form action="#" class="form_footer">
-                    <h2 class="calc__head _scr-item">{'submit_your_application' | lexicon}</h2>
-                    <h3 class="sub__success">{'get_availability_and_price' | lexicon}</h3>
-                    <input type="text" class="input _reg" required placeholder="{'placeholder_name' | lexicon}">
-                    <input type="text" class="input _reg _phone"  required placeholder="+38 (---) --- -- --">
-                    <input type="email"  class="input _reg" required placeholder="e-mail">
-                    <div class="footer_form">
-                        <button class="btn-footer" type="submit">{'btn_submit' | lexicon}</button>
-                        <div class="checkbox__wrap">
-                            <label class="checkbox">
-                                <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
 
-                                <p class="checkbox__text  checkbox__header">{'btn_get_price' | lexicon}</p>
-                            </label>
-                            <label class="checkbox">
-                                <input id="politic" type="checkbox" name="agreement" required class="checkbox__input _req">
+                {'!AjaxForm' | snippet:[
+                    'hooks' => 'FormItSaveForm,email',
+                    'form' => '@FILE chunks/forms/form_footer_2.tpl',
+                    'emailTo' => ('email_to' | option),
+                    'emailCC' => ('email_to' | option),
+                    'emailFrom' => 'emailsender' | config,
+                    'emailSubject' => 'Новая заявка',
+                    'emailTpl' => '@FILE chunks/forms/email.tpl',
+                    'validate' => 'name:required,phone:required,agreement:required,politic:required,workemail:blank',
+                    'validationErrorMessage' => $error_message,
+                    'successMessage' => '',
+                    'formName' => 'Новая заявка',
+                    'formFields' => 'name,phone,email'
+                ]}
 
-                                <p class="checkbox__text  checkbox__header" >{'consent_text' | lexicon}</p>
-                            </label>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>

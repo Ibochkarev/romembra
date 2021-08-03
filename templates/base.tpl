@@ -37,9 +37,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {if $_modx->config.cultureKey == 'ua'}
-        <link rel="alternate" href="romembra.zeus.blender.team/ru{$_modx->makeUrl($_modx->resource.id)}" hreflang="ru" />
+        <link rel="alternate" href="https://romembra.zeus.blender.team/ru/" hreflang="ru" />
         {else}
-        <link rel="alternate" href="romembra.zeus.blender.team{$_modx->makeUrl($_modx->resource.id)}" hreflang="uk" />
+        <link rel="alternate" href="https://romembra.zeus.blender.team/" hreflang="uk" />
         {/if}
 
         <script type="application/ld+json">
