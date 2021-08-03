@@ -130,7 +130,38 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/template/js/js.cookie.min.js"></script>
     {* <script src="assets/template/js/app.min.js"></script> *}
+    <style>#jGrowl .af-message-success { display:none !important; }</style>
     <script>
+    $(document).on('af_complete', function (event, response) {
+        var fid = response.form[0].id;
+        if (fid == "orderForm") {
+            if (response.success) {
+                $("#form ._footer--succes").addClass('_active');
+                setTimeout(function () {
+                    $("#form ._footer--succes").removeClass('_active');
+                }, 5000);
+            }
+        }
+        if (fid == "orderFormPopup") {
+            if (response.success) {
+                $(".popup_massagename-message-table").removeClass('_active');
+                $(".popup_massagename-message-table ._footer--succes").addClass('_active');
+                setTimeout(function () {
+                    $(".popup_massagename-message-table ._footer--succes").removeClass('_active');
+                }, 5000);
+            }
+        }
+        if (fid == "orderFormPopup2") {
+            $(".popup_massagename-message").removeClass('_active');
+            if (response.success) {
+                $(".popup_massagename-message-table ._footer--succes").addClass('_active');
+                setTimeout(function () {
+                    $(".popup_massagename-message ._footer--succes").removeClass('_active');
+                }, 5000);
+            }
+        }
+
+    });
     $(document).ready(function () {
         if (!Cookies.get('visit')) {
             $('.cookie').addClass('_active');
