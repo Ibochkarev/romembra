@@ -37,9 +37,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {if $_modx->config.cultureKey == 'ua'}
-        <link rel="alternate" href="https://romembra.zeus.blender.team/ru/" hreflang="ru" />
+        <link rel="alternate" href="https://romembra.com.ua/ru/" hreflang="ru" />
         {else}
-        <link rel="alternate" href="https://romembra.zeus.blender.team/" hreflang="uk" />
+        <link rel="alternate" href="https://romembra.com.ua/" hreflang="uk" />
         {/if}
 
         <meta name="google-site-verification" content="erqdonDNkw5PjfOukX0Z0fDrPjEfsSo1silp0ygEvic" />

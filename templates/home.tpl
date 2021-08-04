@@ -46,7 +46,7 @@
                         <source srcset="{$_modx->resource.banner_img}" type="image/webp">
                         <img class="main__ibg _scr-item" src="{$_modx->resource.banner_img}" alt="">
                     </picture>
-                    <h1 class="head--wrap__header _scr-item _points"{$_modx->resource.banner_text}</h1>
+                    <h1 class="head--wrap__header _scr-item _points">{$_modx->resource.banner_text}</h1>
                     <div class="head--wrap__partner">
                         <div class="wrap--partner__item _scr-item _points">
                             <picture>
